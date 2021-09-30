@@ -1,13 +1,13 @@
-# Offline Insider Programme Enroll
+# Offline Insider Enroll
 
 ## Description:
 
-Offline Insider Programme enroll is a simple Batch script to enable access to Insider Preview Builds to users without a microsoft account!
+Offline Insider enroll is a simple Batch script to enable access to Insider Preview Builds to users without a microsoft account!
 
 ## Starting the script:
 
-To start the script you must run the *OfflineInsiderProgrammeEnroll.cmd* File as administrator. To run a file as administrator you must:
-Select the *OfflineInsiderProgrammeEnroll.cmd* file(left click) > right click on the selected file and select `Run as administrator`  
+To start the script you must run the *OfflineInsiderEnroll.cmd* File as administrator. To run a file as administrator you must:
+Select the *OfflineInsiderEnroll.cmd* file(left click) > right click on the selected file and select `Run as administrator`  
 
 **Take a look at the following gif to understand this better.**
 
@@ -24,5 +24,4 @@ To learn more about Insider Preview Channels, Click [here](https://blogs.windows
 
 ### Resetting Insider Programme configurations to default:
 
-To disable *Windows Insider Programme Builds* to default, you need to choose the `Stop receiving Insider Preview builds` option in the *OfflineInsiderProgramme.cmd* file. **You will be prompted to reboot your system** after doing so.
-"# OfflineInsiderProgrammeEnroll" 
+To disable *Windows Insider Programme Builds* to default, you need to choose the `Stop receiving Insider Preview builds` option in the *OfflineInsiderenroll.cmd* file. **You will be prompted to reboot your system** after doing so.
