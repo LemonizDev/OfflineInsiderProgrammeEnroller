@@ -20,7 +20,7 @@ Upon starting the script, you are going to see a few options, to make your choic
 
 To learn more about Insider Preview Channels, Click [here](https://blogs.windows.com/windows-insider/2020/06/15/introducing-windows-insider-channels/)
 
-![Image](https://cdn.discordapp.com/attachments/752526323737427989/893091091354636348/unknown.png)
+![Image](https://cdn.discordapp.com/attachments/752526323737427989/893109783949869056/unknown.png)
 
 ### Resetting Insider Programme configurations to default:
 

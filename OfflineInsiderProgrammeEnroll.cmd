@@ -31,9 +31,9 @@ if %build% LSS 17763 (
 reg query HKU\S-1-5-19 1>nul 2>nul
 if %ERRORLEVEL% equ 0 goto :START_SCRIPT
 
-echo =========================================================
-echo Please execute this script as administrator and try again
-echo =========================================================
+echo ==========================================================
+echo Please execute this script as administrator and try again!
+echo ==========================================================
 echo.
 pause
 goto :EOF
@@ -46,7 +46,8 @@ if %ERRORLEVEL% equ 0 set "FlightSigningEnabled=1"
 :CHOICE_MENU
 cls
 set "choice="
-echo OfflineInsiderEnroll v%scriptver%
+echo Welcome to OfflineInsiderEnroll v%scriptver%
+echo Please input your choice from the options below.
 echo.
 echo 1 - Enroll to Insider Fast ring (Dev Channel)
 echo 2 - Enroll to Insider Slow ring (Beta Channel)
@@ -55,7 +56,7 @@ echo.
 echo 4 - Stop receiving Insider Preview builds...
 echo 5 - Quit without making any changes...
 echo.
-set /p choice="Input your command: "
+set /p choice="Choice: "
 echo.
 if /I "%choice%"=="1" goto :ENROLL_DEV
 if /I "%choice%"=="2" goto :ENROLL_BETA
@@ -123,7 +124,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\Applicability" /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\Applicability" /f /t REG_SZ /v Ring /d "%Ring%"
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\Applicability" /f /t REG_SZ /v ContentType /d "%Content%"
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\Applicability" /f /t REG_SZ /v BranchName /d "%Channel%"
-if %build% LSS 21990 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\UI\Strings" /f /t REG_SZ /v StickyXaml /d "<StackPanel xmlns="^""http://schemas.microsoft.com/winfx/2006/xaml/presentation"^""><TextBlock Style="^""{StaticResource BodyTextBlockStyle }"^"">This device has been enrolled to the Windows Insider programme using OfflineInsiderProgrammeEnroll v%scriptver%. If you want to change your channel or stop receiving Insider Preview builds, please use the script. <Hyperlink NavigateUri="^""https://github.com/LemonizDev/OfflineInsiderProgrammeEnroll"^"" TextDecorations="^""None"^"">Click here to download the script</Hyperlink></TextBlock><TextBlock Text="^""Applied settings"^"" Margin="^""0,20,0,10"^"" Style="^""{StaticResource SubtitleTextBlockStyle}"^"" /><TextBlock Style="^""{StaticResource BodyTextBlockStyle }"^"" Margin="^""0,0,0,5"^""><Run FontFamily="^""Segoe MDL2 Assets"^"">&#xECA7;</Run> <Span FontWeight="^""SemiBold"^"">%Fancy%</Span></TextBlock><TextBlock Text="^""Channel: %Channel%"^"" Style="^""{StaticResource BodyTextBlockStyle }"^"" /><TextBlock Text="^""Content: %Content%"^"" Style="^""{StaticResource BodyTextBlockStyle }"^"" />"
+if %build% LSS 21990 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\UI\Strings" /f /t REG_SZ /v StickyXaml /d "<StackPanel xmlns="^""http://schemas.microsoft.com/winfx/2006/xaml/presentation"^""><TextBlock Style="^""{StaticResource BodyTextBlockStyle }"^"">This device has been enrolled to the Windows Insider programme using OfflineInsiderEnroll v%scriptver%. Please use the script if you'd like to change your channel or stop receiving Insider Preview Builds. <Hyperlink NavigateUri="^""https://github.com/LemonizDev/OfflineInsiderProgrammeEnroll"^"" TextDecorations="^""None"^"">Learn More</Hyperlink></TextBlock><TextBlock Text="^""Applied settings"^"" Margin="^""0,20,0,10"^"" Style="^""{StaticResource SubtitleTextBlockStyle}"^"" /><TextBlock Style="^""{StaticResource BodyTextBlockStyle }"^"" Margin="^""0,0,0,5"^""><Run FontFamily="^""Segoe MDL2 Assets"^"">&#xECA7;</Run> <Span FontWeight="^""SemiBold"^"">%Fancy%</Span></TextBlock><TextBlock Text="^""Channel: %Channel%"^"" Style="^""{StaticResource BodyTextBlockStyle }"^"" /><TextBlock Text="^""Content: %Content%"^"" Style="^""{StaticResource BodyTextBlockStyle }"^"" />"
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\UI\Visibility" /f /t REG_DWORD /v UIHiddenElements /d 65535
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\UI\Visibility" /f /t REG_DWORD /v UIDisabledElements /d 65535
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\UI\Visibility" /f /t REG_DWORD /v UIServiceDrivenElementVisibility /d 0
