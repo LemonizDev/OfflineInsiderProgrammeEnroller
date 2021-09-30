@@ -6,7 +6,8 @@ Offline Insider enroll is a simple Batch script to enable access to Insider Prev
 
 ## Starting the script:
 
-To start the script you must run the *OfflineInsiderEnroll.cmd* File as administrator. To run a file as administrator you must:
+To start the script you must run the *OfflineInsiderEnroll.cmd* File as administrator, to do so you must:
+
 Select the *OfflineInsiderEnroll.cmd* file(left click) > right click on the selected file and select `Run as administrator`  
 
 **Take a look at the following gif to understand this better.**
